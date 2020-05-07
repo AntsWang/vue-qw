@@ -1,5 +1,5 @@
 <template>
-  <div class="wraper">
+  <div class="wraperH">
     <span>{{level}}</span>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped>
-.wraper {
+.wraperH {
   width: 65px;
   height: 147px;
   position: absolute;

@@ -1,7 +1,7 @@
 <template>
   <div v-if="!complete">
     <QuestionItem :itemDetail="getCur"></QuestionItem>
-    <div class="btn">
+    <div class="ibtn">
       <button v-if="itemNum<4" @click="nextQuestion(itemNum+1)">下一题</button>
       <button v-if='itemNum==4' @click="submit()">提交</button>
     </div>
@@ -26,9 +26,8 @@ export default {
 };
 </script>
 
-<style>
-.btn {
+<style scoped>
+.ibtn {
   text-align: center;
-  margin-top: 40px;
 }
 </style>

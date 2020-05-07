@@ -5,11 +5,10 @@ import actions from './action';
 import getters from './getter';
 Vue.use(Vuex);
 const state = {
-	complete:false,
 	level: '第一周', //活动周数
 	itemNum: 0, // 第几题
-	allTime: 0,  //总共用时
-	timer: '', //定时器
+	correctAnswer:[2,7,12,13,18],
+	totalScore:0,
 	itemDetail: [{
 		"topic_id": 20,
 		"active_topic_id": 4,

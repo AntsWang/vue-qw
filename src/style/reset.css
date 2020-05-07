@@ -58,3 +58,9 @@ body{
 .show{
     display: block;
 }
+.clearfix::before{
+    content: '';
+    display: table;
+}
+
+

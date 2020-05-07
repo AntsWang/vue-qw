@@ -1,24 +1,21 @@
 <template>
-  <div>
-    <router-view></router-view>
-    <Week :level="level"/>
+  <div class="clearfix" style="height:100%">
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
+    <Alert ref="alert"></Alert>
   </div>
 </template>
 <script>
-import Week from "./components/week";
-import { mapState } from "vuex";
+import Vue from 'vue';
+import Alert from './components/alert.vue';
 export default {
   name: "App",
-  components: { Week },
-  computed:{
-    ...mapState(['level'])
+  components:{
+    Alert
+  },
+  mounted(){
+      Vue.prototype.$alert = this.$refs.alert;
   }
 };
 </script>
-
-<style>
-.btn {
-  text-align: center;
-  margin-top: 40px;
-}
-</style>

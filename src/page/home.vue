@@ -2,13 +2,18 @@
   <div class="wraper">
     <div class="img"></div>
     <a class="start" href="#/questions"></a>
+    <Week :level="level" />
   </div>
 </template>
 
 <script>
+import Week from '../components/week';
+import {mapState} from 'vuex';
 export default {
   name: "",
-  components: {},
+  components: {
+    Week
+  },
   props: {},
   data() {
     return {};
@@ -20,7 +25,9 @@ export default {
   beforeRouteUpdate() {},
   methods: {},
   filter: {},
-  computed: {},
+  computed: {
+    ...mapState(["level"])
+  },
   watch: {}
 };
 </script>
@@ -36,7 +43,7 @@ export default {
   margin: 0 auto 20px;
   width: 80%;
   height: 200px;
-  background: url(/img/1-2.278774ac.png);
+  background: url("../assets/1-2.png");
   background-size: 100% 100%;
 }
 .start {
@@ -47,5 +54,6 @@ export default {
   height: 40px;
   background-repeat: no-repeat;
   margin: 0 auto;
+  background-position: 50%;
 }
 </style>
